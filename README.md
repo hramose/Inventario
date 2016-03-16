@@ -1,2 +1,2 @@
 # Inventario
-Aplicación inventario realizada con Laravel
+Aplicación inventario desarrollada en Laravel
