@@ -6,13 +6,25 @@
     <meta charset="utf-8">
 
     <title>Inventario</title>
-
+    
+    <!-- Bootstrap Core CSS -->
     {!!Html::style('css/bootstrap.min.css')!!}
+
+    <!--DataTables-->
     {!!Html::style('css/jquery.dataTables.css')!!}
     {!!Html::script('js/jquery-1.12.1.js')!!}
+
+    <!-- MetisMenu CSS -->
     {!!Html::style('css/metisMenu.min.css')!!}
+
+    <!-- Custom CSS -->
     {!!Html::style('css/sb-admin-2.css')!!}
+
+    <!-- Custom Fonts -->
     {!!Html::style('css/font-awesome.min.css')!!}
+    
+    <!-- Icono -->
+    <link rel="shortcut icon" href="img/tigoune.ico">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -87,7 +99,10 @@
             <footer start>
                 <footer class="site-footer">
                   <div class="text-center">
-                    Copyright © 2016. Todos Los Derechos Reservados.
+                    Copyright © 2016 Une Telefónica de Pereira. Todos Los Derechos Reservados.
+                    <a href="#" class="go-top">
+                        <i class="fa fa-angle-up"></i>
+                    </a>
                   </div>
                 </footer>
             <footer end>
@@ -96,16 +111,24 @@
 
     </div>
     <!-- /#wrapper -->
-
+    
+    <!-- jQuery -->
     {!!Html::script('js/jquery.min.js')!!}
-    {!!Html::script('js/bootstrap.min.js')!!}
-    {!!Html::script('js/jquery.dataTables.js')!!}
-    {!!Html::script('js/metisMenu.min.js')!!}
-    {!!Html::script('js/sb-admin-2.js')!!}
 
+    <!-- Bootstrap Core JavaScript -->
+    {!!Html::script('js/bootstrap.min.js')!!}
+    
+    <!--DataTables-->
+    {!!Html::script('js/jquery.dataTables.js')!!}
     @section('scripts')
 
     @show
+
+    <!-- Metis Menu Plugin JavaScript -->
+    {!!Html::script('js/metisMenu.min.js')!!}
+
+    <!-- Custom Theme JavaScript -->
+    {!!Html::script('js/sb-admin-2.js')!!}
     
 </body>
 

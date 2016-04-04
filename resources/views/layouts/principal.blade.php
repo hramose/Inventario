@@ -5,23 +5,32 @@
     <meta charset="utf-8">
     
     <title>Inventario</title>
-
+    
+    <!-- Bootstrap core CSS -->
     {!!Html::style('css/bootstrap.css')!!}
-    {!!Html::style('css/jquery.dataTables.css')!!}
-    {!!Html::script('js/jquery-1.12.1.js')!!}
 
-    {!!Html::style('css/metisMenu.min.css')!!}
-    {!!Html::style('css/sb-admin-2.css')!!}
-
+    <!--External css-->
     {!!Html::style('css/font-awesome.css')!!}
     {!!Html::style('css/zabuto_calendar.css')!!}
     {!!Html::style('css/jquery.gritter.css')!!}
     {!!Html::style('css/style.css')!!}
+  
+    <!--DataTables-->
+    {!!Html::style('css/jquery.dataTables.css')!!}
+    {!!Html::script('js/jquery-1.12.1.js')!!}
     
+    <!-- MetisMenu CSS -->
+    {!!Html::style('css/metisMenu.min.css')!!}    
+    
+    <!-- Custom styles for this template -->
     {!!Html::style('css/style.css')!!}
     {!!Html::style('css/style-responsive.css')!!}
+    {!!Html::style('css/sb-admin-2.css')!!}
     
     {!!Html::script('js/Chart.js')!!}
+    
+    <!-- Icono -->
+    <link rel="shortcut icon" href="img/tigoune.ico">
 
   </head>
 
@@ -64,34 +73,46 @@
       <footer start>
         <footer class="site-footer">
           <div class="text-center">
-            Copyright © 2016. Todos Los Derechos Reservados.
+            Copyright © 2016 Une Telefónica de Pereira. Todos Los Derechos Reservados.
+            <a href="#" class="go-top">
+              <i class="fa fa-angle-up"></i>
+            </a>
           </div>
         </footer>
       <footer end>                  
     </section>
       
+    <!-- js placed at the end of the document so the pages load faster -->
     {!!Html::script('js/jquery.js')!!}
     {!!Html::script('js/bootstrap.min.js')!!}
     {!!Html::script('js/jquery.dcjqaccordion.2.7.js')!!}
     {!!Html::script('js/jquery.scrollTo.min.js')!!}
     {!!Html::script('js/jquery.nicescroll.js')!!}
     {!!Html::script('js/jquery.sparkline.js')!!}
-
+    
+    <!--DataTables-->
     {!!Html::script('js/jquery.dataTables.js')!!}
+    @section('scripts')
 
+    @show
+    
+    <!--common script for all pages-->
     {!!Html::script('js/common-scripts.js')!!}
     
     {!!Html::script('js/jquery.gritter.js')!!}
     {!!Html::script('js/gritter-conf.js')!!}
     
+    <!--script for this page-->
     {!!Html::script('js/sparkline-chart.js')!!}
     {!!Html::script('js/zabuto_calendar.js')!!}
-
+    
+    <!-- Metis Menu Plugin JavaScript -->
     {!!Html::script('js/metisMenu.min.js')!!}
+
+    <!-- Custom Theme JavaScript -->
     {!!Html::script('js/sb-admin-2.js')!!}
 
-    <!-- js placed at the end of the document so the pages load faster --> 
-  	<script type="application/javascript">
+    <script type="application/javascript">
       $(document).ready(function () {
         $("#date-popover").popover({html: true, trigger: "manual"});
         $("#date-popover").hide();
@@ -125,10 +146,6 @@
         console.log('nav ' + nav + ' to: ' + to.month + '/' + to.year);
       }
     </script>
-
-    @section('scripts')
-
-    @show
 
   </body>
 </html>

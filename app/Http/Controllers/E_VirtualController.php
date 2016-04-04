@@ -34,6 +34,7 @@ class E_VirtualController extends Controller
     public function index()
     {
         $evirtuals = Evirtual::all();
+        //dd($evirtuals->toArray());
         return view('evirtual.index', compact('evirtuals'));
     }
 

@@ -5,11 +5,11 @@ namespace Inventario;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Aplicaciones extends Model
+class App extends Model
 {
     use SoftDeletes;
 
-    protected $table = 'aplicaciones';
+    protected $table = 'apps';
 
     protected $fillable = ['nombre'];
 

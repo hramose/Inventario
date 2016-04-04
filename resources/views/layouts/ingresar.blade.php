@@ -10,17 +10,17 @@
     <title>Iventario</title>
 
     <!-- Bootstrap core CSS -->
-    <!--{!!Html::style('css/bootstrap.css')!!}-->
     {!!Html::style('css/bootstrap.css')!!}
+
     <!--external css-->
-    <!--{!!Html::style('font-awesome/css/font-awesome.css')!!}-->
     {!!Html::style('css/font-awesome.css')!!}
         
     <!-- Custom styles for this template -->
-    <!--{!!Html::style('css/style.css')!!}-->
     {!!Html::style('css/style.css')!!}
-    <!--{!!Html::style('css/style-responsive.css')!!}-->
     {!!Html::style('css/style-responsive.css')!!}
+    
+    <!-- Icono -->
+    <link rel="shortcut icon" href="img/tigoune.ico">
     
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -36,15 +36,13 @@
             @yield('content')             
         </div>
     </div>
+
     <!-- js placed at the end of the document so the pages load faster -->
-    <!--{!!Html::script('js/jquery.js')!!}-->
     {!!Html::script('js/jquery.js')!!}
-    <!--{!!Html::script('js/bootstrap.min.js')!!}-->
     {!!Html::script('js/bootstrap.min.js')!!}
     
     <!--BACKSTRETCH-->
     <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
-    <!--{!!Html::script('js/jquery.backstretch.min.js')!!}-->
     {!!Html::script('js/jquery.backstretch.min.js')!!}
     
     <script>

@@ -80,5 +80,5 @@
 @stop
 
 @section('scripts')
-	{!!Html::script('js/dtable.js')!!}
+	{!!Html::script('js/table.js')!!}
 @endsection

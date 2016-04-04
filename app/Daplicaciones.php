@@ -17,6 +17,6 @@ class Daplicaciones extends Model
 
     //Relación belongsTo
     public function aplicacion(){
-    	return $this->belongsTo('Inventario\Aplicaciones');
+    	return $this->belongsTo('Inventario\App');
     }
 }

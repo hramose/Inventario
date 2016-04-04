@@ -3,26 +3,24 @@
 namespace Inventario\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Inventario\Daplicaciones;
-use Inventario\Aplicaciones;
+use Inventario\App;
 use Session;
 use Redirect;
 use Inventario\Http\Requests;
 use Inventario\Http\Controllers\Controller;
-use Inventario\Http\Requests\DappRequest;
+use Inventario\Http\Requests\AppRequest;
+use Inventario\Http\Requests\AppUpdateRequest;
 use Illuminate\Routing\Route;
-use DB;
 
-class DaplicacionesController extends Controller
+class AppController extends Controller
 {
-
     public function __construct(){
         $this->middleware('auth');
         $this->beforeFilter('@find', ['only' => ['edit', 'update', 'destroy']]);
     }
 
     public function find(Route $route){
-        $this->daplicacion = Daplicaciones::find($route->getParameter('daplicacion'));
+        $this->app = App::find($route->getParameter('app'));
     }
 
     /**
@@ -32,9 +30,8 @@ class DaplicacionesController extends Controller
      */
     public function index()
     {
-        $daplicaciones = Daplicaciones::all();
-        //dd($daplicaciones->toArray());
-        return view('daplicacion.index', compact('daplicaciones'));
+        $apps = App::all();
+        return view('app.index', compact('apps'));
     }
 
     /**
@@ -44,8 +41,7 @@ class DaplicacionesController extends Controller
      */
     public function create()
     {
-        $aplicaciones = Aplicaciones::orderBy('nombre', 'ASC')->lists('nombre', 'id');
-        return view('daplicacion.create', compact('aplicaciones'));
+        return view('app.create');
     }
 
     /**
@@ -54,10 +50,10 @@ class DaplicacionesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(DappRequest $request)
+    public function store(AppRequest $request)
     {
-        Daplicaciones::create($request->all());
-        return redirect('/daplicacion')->with('message', 'Descripción Creada Correctamente');
+        App::create($request->all());
+        return redirect('/app')->with('message', 'Aplicación Agrega Correctamente');
     }
 
     /**
@@ -79,8 +75,7 @@ class DaplicacionesController extends Controller
      */
     public function edit($id)
     {
-        $aplicaciones = Aplicaciones::orderBy('nombre', 'ASC')->lists('nombre', 'id');
-        return view('daplicacion.edit', ['daplicacion' => $this->daplicacion], compact('aplicaciones'));
+        return view('app.edit', ['app' => $this->app]);
     }
 
     /**
@@ -90,12 +85,12 @@ class DaplicacionesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(DappRequest $request, $id)
+    public function update(AppUpdateRequest $request, $id)
     {
-        $this->daplicacion -> fill($request->all());
-        $this->daplicacion -> save();
-        Session::flash('message', 'Descripción Editada Correctamente');
-        return Redirect::to('/daplicacion');
+        $this->app -> fill($request->all());
+        $this->app -> save();
+        Session::flash('message', 'Aplicación Editada Correctamente');
+        return Redirect::to('/app');
     }
 
     /**
@@ -106,8 +101,8 @@ class DaplicacionesController extends Controller
      */
     public function destroy($id)
     {
-        $this->daplicacion -> delete();
-        Session::flash('message', 'Desripción Eliminada Correctamente');
-        return Redirect::to('/daplicacion');
+        $this->app -> delete();
+        Session::flash('message', 'Aplicación Eliminada Correctamente');
+        return Redirect::to('/app');
     }
 }
