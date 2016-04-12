@@ -16,10 +16,17 @@ class Aplicaciones extends Model
     protected $dates = ['deleted_at'];
 
     //Relación hasMany
-    public function daplicaciones(){
-        return $this->hasMany('Inventario\Daplicaciones');
+    /*public function efisicos(){
+        return $this->belongsToMany('\Inventario\Efisico','asignar_e_fs')
+            ->withPivot('aplicaciones_id');
     }
 
+    public function evirtuals(){
+        return $this->belongsToMany('\Inventario\Evirtual','asignar_e_vs')
+            ->withPivot('aplicaciones_id');
+    }*/
+
+    //Relación belongsToMany
     public function asiganarefs(){
         return $this->hasMany('Inventario\Asignar_e_f');
     }

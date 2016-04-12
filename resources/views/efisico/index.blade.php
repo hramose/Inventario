@@ -52,7 +52,7 @@
 
 	<hr>
 
-	{!!link_to('/efisico/create', $title='Agregar Elemento Físico', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
+	{!!link_to('/fefisico/create', $title='Agregar Elemento Físico', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
 	{!!link_to('/tefisico', $title='Gestionar Tipos de Elementos Físicos', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
 	{!!link_to('/evirtual', $title='Ver Elementos Virtuales', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
 
