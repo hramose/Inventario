@@ -50,12 +50,6 @@ class Efisico extends Model
     }
 
     public function asiganarefs(){
-        return $this->hasMany('Inventario\Asignar_e_f');
+        return $this->hasMany('Inventario\Asignaref');
     }
-
-    //Relación hasMany
-    /*public function aplicaciones(){
-        return $this->belongsToMany('\Inventario\Aplicaciones','asignar_e_fs')
-            ->withPivot('efisico_id');
-    }*/
 }

@@ -4,10 +4,6 @@
 
 	@include('alerts.request')
 
-	{!!link_to('/oefisico', $title='Ver Observaciones', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
-	{!!link_to('/defisico', $title='Ver descripciones', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
-	{!!link_to('/befisico/create', $title='Agregar BackUp', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
-
 	<hr>
 
 	<h4><i class="fa fa-angle-right"></i> Crear Observación </h4>
@@ -17,6 +13,14 @@
 	{!!Form::open(['route'=>'oefisico.store', 'method'=>'POST'])!!}
 		@include('oefisico.form.oefisico')
 		{!!Form::submit('Agregar', ['class'=>'btn btn-primary'])!!}
+		{!!link_to('/efisico/create', $title='Si el elemento físico no se encuentra en la lista da clic aquí', $attributes = ['class' => 'btn btn-danger'], $secure = null)!!}
 	{!!Form::close()!!}
+	
+	<hr>
+
+	{!!link_to('/oefisico', $title='Observaciones', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/efisico', $title='Elementos físicos', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+
+	<hr>
 
 @stop

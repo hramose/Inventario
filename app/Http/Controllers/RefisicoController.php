@@ -11,7 +11,6 @@ use Redirect;
 use Inventario\Http\Requests;
 use Inventario\Http\Controllers\Controller;
 use Inventario\Http\Requests\RefisicoRequest;
-use Inventario\Http\Requests\RefUpdateRequest;
 use Illuminate\Routing\Route;
 
 class RefisicoController extends Controller
@@ -92,7 +91,7 @@ class RefisicoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(RefUpdateRequest $request, $id)
+    public function update(RefisicoRequest $request, $id)
     {
         $this->refisico -> fill($request->all());
         $this->refisico -> save();

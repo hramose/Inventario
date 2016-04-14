@@ -12,7 +12,7 @@
 		<thead>
 			<tr>
 				<th>Id</th>
-				<th>Elemento Físico</th>
+				<th>Nombre del Host</th>
 				<th>Observación</th>
 				<th>Realizado Por</th>
 				<th>Editar</th>
@@ -22,7 +22,7 @@
 		<tfoot>
 			<tr>
 				<th>Id</th>
-				<th>Elemento Físico</th>
+				<th>Nombre del Host</th>
 				<th>Observación</th>
 				<th>Realizado Por</th>
 				<th>Editar</th>
@@ -52,8 +52,13 @@
 
 	<hr>
 	
-	{!!link_to('/oefisico/create', $title='Agregar Observación', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
+	{!!link_to('/oefisico/create', $title='Nueva observación', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/efisico', $title='Elementos físicos', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/defisico', $title='Descripciones', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/refisico', $title='Red', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/befisico', $title='Backup´s', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
 
+	<hr>
 @stop
 
 @section('scripts')

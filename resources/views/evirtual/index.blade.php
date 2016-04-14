@@ -14,7 +14,7 @@
 				<th>Id</th>
 				<th>Elemento Físico</th>
 				<th>Hardware - Real</th>
-				<th>Nombre</th>
+				<th>Nombre del Host</th>
 				<th>Estado</th>
 				<th>Editar</th>
 				<th>Eliminar</th>
@@ -25,7 +25,7 @@
 				<th>Id</th>
 				<th>Elemento Físico</th>
 				<th>Hardware - Real</th>
-				<th>Nombre</th>
+				<th>Nombre del Host</th>
 				<th>Estado</th>
 				<th>Editar</th>
 				<th>Eliminar</th>
@@ -54,9 +54,14 @@
 
 	<hr>
 		
-	{!!link_to('/evirtual/create', $title='Agregar Elemento Virtual', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
-	{!!link_to('/tevirtual', $title='Gestionar Tipos de Elementos Virtuales', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
-	{!!link_to('/efisico', $title='Ver Elementos Físicos', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
+	{!!link_to('/evirtual/create', $title='Nuevo elemento virtual', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/tevirtual', $title='Tipos de elemento virtuales', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/devirtual', $title='Descripciones', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/revirtual', $title='Red', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/oevirtual', $title='Observaciones', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/bevirtual', $title='Backup´s', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+
+	<hr>
 
 @stop
 

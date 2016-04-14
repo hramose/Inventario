@@ -3,7 +3,7 @@
 namespace Inventario\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Inventario\Observaciones;
+use Inventario\Oevirtual;
 use Inventario\Evirtual;
 use Session;
 use Redirect;
@@ -21,7 +21,7 @@ class OevirtualController extends Controller
     }
 
     public function find(Route $route){
-        $this->oevirtual = Observaciones::find($route->getParameter('oevirtual'));
+        $this->oevirtual = Oevirtual::find($route->getParameter('oevirtual'));
     }
 
     /**
@@ -31,7 +31,7 @@ class OevirtualController extends Controller
      */
     public function index()
     {
-        $oevirtuals = Observaciones::all();
+        $oevirtuals = Oevirtual::all();
         return view('oevirtual.index', compact('oevirtuals'));
     }
 
@@ -54,8 +54,8 @@ class OevirtualController extends Controller
      */
     public function store(OevirtualRequest $request)
     {
-        Observaciones::create($request->all());
-        return redirect('/bevirtual/create')->with('message', 'Observación Creada Correctamente');
+        Oevirtual::create($request->all());
+        return redirect('/oevirtual')->with('message', 'Observación Creada Correctamente');
     }
 
     /**

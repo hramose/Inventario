@@ -9,6 +9,7 @@ use Redirect;
 use Inventario\Http\Requests;
 use Inventario\Http\Controllers\Controller;
 use Inventario\Http\Requests\TevirtualRequest;
+use Inventario\Http\Requests\TevirtualUpdateRequest;
 use Illuminate\Routing\Route;
 
 class TevirtualController extends Controller
@@ -84,7 +85,7 @@ class TevirtualController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(TevirtualRequest $request, $id)
+    public function update(TevirtualUpdateRequest $request, $id)
     {
         $this->tevirtual -> fill($request->all());
         $this->tevirtual -> save();

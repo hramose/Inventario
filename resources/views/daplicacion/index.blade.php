@@ -30,10 +30,10 @@
 			</tr>		
 		</tfoot>
 		<tbody>
-			@foreach($daplicaciones as $daplicacion)
+			@foreach($daplicacions as $daplicacion)
 			<tr>
 				<td>{{$daplicacion->id}}</td>
-				<td>{{$daplicacion->aplicaciones_id}}</td>
+				<td>{{$daplicacion->aplicacion->nombre}}</td>
 				<td>{{$daplicacion->descripcion}}</td>
 				<td>{{$daplicacion->version}}</td>
 				<td>
@@ -50,9 +50,13 @@
 	</table>
 
 	<hr>
-
-	{!!link_to('/daplicacion/create', $title='Agregar Descripción', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
-	{!!link_to('/aplicacion', $title='Ver Aplicaciones', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
+	
+	{!!link_to('/daplicacion/create', $title='Nueva descripción', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/aplicacion', $title='Aplicaciones', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/asignaref', $title='Aplicaciones en elementos físicos', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/asignarev', $title='Aplicaciones en elementos virtuales', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	
+	<hr>
 
 @stop
 

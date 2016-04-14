@@ -12,7 +12,7 @@
 		<thead>
 			<tr>
 				<th>Id</th>
-				<th>Elemento Físico</th>
+				<th>Nombre del Host</th>
 				<th>Tipo de Red</th>
 				<th>Tipo de Conexión</th>
 				<th>Ip</th>
@@ -25,7 +25,7 @@
 		<tfoot>
 			<tr>
 				<th>Id</th>
-				<th>Elemento Físico</th>
+				<th>Nombre del Host</th>
 				<th>Tipo de Red</th>
 				<th>Tipo de Conexión</th>
 				<th>Ip</th>
@@ -60,9 +60,14 @@
 
 	<hr>
 	
-	{!!link_to('/refisico/create', $title='Agregar Red', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
-	{!!link_to('/tred', $title='Gestionar Tipos de Redes', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
-	{!!link_to('/efisico', $title='Ver Elementos Físicos', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
+	{!!link_to('/refisico/create', $title='Nueva red', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/tred', $title='Tipos de redes', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/efisico', $title='Elementos físicos', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/defisico', $title='Descripciones', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/oefisico', $title='Observaciones', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/befisico', $title='Backup´s', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	
+	<hr>
 
 @stop
 

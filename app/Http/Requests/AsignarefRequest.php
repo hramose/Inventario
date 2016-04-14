@@ -25,7 +25,7 @@ class AsignarefRequest extends Request
     {
         return [
             'efisico_id' => 'required', 
-            'aplicaciones_id' => 'required',
+            'aplicacion_id' => 'required',
         ];
     }
 }

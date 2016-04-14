@@ -12,32 +12,28 @@
 		<thead>
 			<tr>
 				<th>ID</th>
-				<th>Fabricante</th>
+				<th>Hardware - Real</th>
 				<th>Tipo</th>
-				<th>Editar</th>
-				<th>Eliminar</th>
+				<th>Operaciones</th>
 			</tr>
 		</thead>
 		<tfoot>
 			<tr>
 				<th>ID</th>
-				<th>Fabricante</th>
+				<th>Hardware - Real</th>
 				<th>Tipo</th>
-				<th>Editar</th>
-				<th>Eliminar</th>
+				<th>Operaciones</th>
 			</tr>
 		</tfoot>
 		<tbody>
 			@foreach($tefisicos as $tefisico)
 			<tr>
 				<td>{{$tefisico->id}}</td>
-				<td>{{$tefisico->fabricante->marca}}</td>
+				<td>{{$tefisico->fabricante}}</td>
 				<td>{{$tefisico->tipo}}</td>
 				<td>
-					{!!link_to_route('tefisico.edit', $title = 'Editar', $parameters = $tefisico -> id, $attributes = ['class'=>'btn btn-primary'])!!}
-				</td>
-				<td>
 					{!!Form::open(['route' => ['tefisico.destroy', $tefisico -> id], 'method' => 'DELETE'])!!}
+						{!!link_to_route('tefisico.edit', $title = 'Editar', $parameters = $tefisico -> id, $attributes = ['class'=>'btn btn-primary'])!!}
 						{!!Form::submit('Eliminar', ['class'=>'btn btn-danger'])!!}
 					{!!Form::close()!!}
 				</td>
@@ -48,9 +44,10 @@
 
 	<hr>
 		
-	{!!link_to('/tefisico/create', $title='Agregar Tipo de Elemento Físico', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
-	{!!link_to('/fefisico', $title='Gestionar Fabricantes', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
-	{!!link_to('/efisico', $title='Ver Elementos Físicos', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
+	{!!link_to('/tefisico/create', $title='Nuevo tipo de elemento físico', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/efisico', $title='Elementos físicos', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	
+	<hr>
 
 @stop
 

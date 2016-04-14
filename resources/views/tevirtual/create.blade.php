@@ -4,8 +4,6 @@
 
 	@include('alerts.request')
 
-	{!!link_to('/tevirtual', $title='Ver Tipos de Elementos Virtuales', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
-
 	<hr>
 
   	<h4><i class="fa fa-angle-right"></i> Crear Tipo de Elemento Virtual </h4>
@@ -16,5 +14,12 @@
 		@include('tevirtual.form.tevirtual')
 		{!!Form::submit('Agregar', ['class'=>'btn btn-primary'])!!}
 	{!!Form::close()!!}
+
+	<hr>
+
+	{!!link_to('/tevirtual', $title='Tipos de Elementos Virtuales', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/evirtual', $title='Elementos Virtuales', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+
+	<hr>
 
 @stop

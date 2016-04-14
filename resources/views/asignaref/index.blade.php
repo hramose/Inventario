@@ -12,19 +12,17 @@
 		<thead>
 			<tr>
 				<th>ID</th>
-				<th>Elemento Físico</th>
+				<th>Nombre del Host</th>
 				<th>Aplicación</th>
-				<th>Editar</th>
-				<th>Eliminar</th>
+				<th>Operaciones</th>
 			</tr>		
 		</thead>
 		<tfoot>
 			<tr>
 				<th>ID</th>
-				<th>Elemento Físico</th>
+				<th>Nombre del Host</th>
 				<th>Aplicación</th>
-				<th>Editar</th>
-				<th>Eliminar</th>
+				<th>Operaciones</th>
 			</tr>		
 		</tfoot>
 		<tbody>
@@ -32,12 +30,10 @@
 			<tr>
 				<td>{{$asignaref->id}}</td>
 				<td>{{$asignaref->efisico->nombre}}</td>
-				<td>{{$asignaref->aplicaciones_id}}</td>
-				<td>
-					{!!link_to_route('asignaref.edit', $title = 'Editar', $parameters = $asignaref -> id, $attributes = ['class'=>'btn btn-primary'])!!}
-				</td>
+				<td>{{$asignaref->aplicacion->nombre}}</td>
 				<td>
 					{!!Form::open(['route' => ['asignaref.destroy', $asignaref -> id], 'method' => 'DELETE'])!!}
+						{!!link_to_route('asignaref.edit', $title = 'Editar', $parameters = $asignaref -> id, $attributes = ['class'=>'btn btn-primary'])!!}
 						{!!Form::submit('Eliminar', ['class'=>'btn btn-danger'])!!}
 					{!!Form::close()!!}
 				</td>
@@ -47,10 +43,12 @@
 	</table>
 
 	<hr>
+		
+	{!!link_to('/asignaref/create', $title='Nueva asignación', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/efisico', $title='Elementos físicos', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/aplicacion', $title='Aplicaciones', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
 	
-	{!!link_to('/asignaref/create', $title='Agregar Asignación', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
-	{!!link_to('/apps', $title='Ver Aplicaciones', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
-	{!!link_to('/efisico', $title='Ver Elementos Físicos', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
+	<hr>
 
 @stop
 

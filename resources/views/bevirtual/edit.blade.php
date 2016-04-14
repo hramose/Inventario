@@ -4,8 +4,6 @@
 
   @include('alerts.request')
 
-  {!!link_to('/bevirtual', $title='Ver BackUp´s', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
-  
   <hr>
 
   <h4><i class="fa fa-angle-right"></i> Editar BackUp </h4>
@@ -20,5 +18,12 @@
       {!!Form::close()!!}
     </td>
   </tr>
+
+  <hr>
+
+  {!!link_to('/bevirtual', $title='Backup´s', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+  {!!link_to('/evirtual', $title='Elementos virtuales', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+  
+  <hr>
   
 @stop

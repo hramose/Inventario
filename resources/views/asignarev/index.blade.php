@@ -12,19 +12,17 @@
 		<thead>
 			<tr>
 				<th>ID</th>
-				<th>Elemento Virtual</th>
+				<th>Nombre del Host</th>
 				<th>Aplicación</th>
-				<th>Editar</th>
-				<th>Eliminar</th>
+				<th>Operaciones</th>
 			</tr>		
 		</thead>
 		<tfoot>
 			<tr>
 				<th>ID</th>
-				<th>Elemento Virtual</th>
+				<th>Nombre del Host</th>
 				<th>Aplicación</th>
-				<th>Editar</th>
-				<th>Eliminar</th>
+				<th>Operaciones</th>
 			</tr>		
 		</foot>
 		<tbody>
@@ -32,12 +30,10 @@
 			<tr>
 				<td>{{$asignarev->id}}</td>
 				<td>{{$asignarev->evirtual->nombre}}</td>
-				<td>{{$asignarev->aplicaciones_id}}</td>
-				<td>
-					{!!link_to_route('asignarev.edit', $title = 'Editar', $parameters = $asignarev -> id, $attributes = ['class'=>'btn btn-primary'])!!}
-				</td>
+				<td>{{$asignarev->aplicacion->nombre}}</td>
 				<td>
 					{!!Form::open(['route' => ['asignarev.destroy', $asignarev -> id], 'method' => 'DELETE'])!!}
+						{!!link_to_route('asignarev.edit', $title = 'Editar', $parameters = $asignarev -> id, $attributes = ['class'=>'btn btn-primary'])!!}
 						{!!Form::submit('Eliminar', ['class'=>'btn btn-danger'])!!}
 					{!!Form::close()!!}
 				</td>
@@ -47,10 +43,12 @@
 	</table>
 
 	<hr>
+		
+	{!!link_to('/asignarev/create', $title='Nueva asignación', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/evirtual', $title='Elementos virtuales', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/aplicacion', $title='Aplicaciones', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
 	
-	{!!link_to('/asignarev/create', $title='Agregar Asignación', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
-	{!!link_to('/apps', $title='Ver Aplicaciones', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
-	{!!link_to('/evirtual', $title='Ver Elementos Virtuales', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
+	<hr>
 
 @stop
 

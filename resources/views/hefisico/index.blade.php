@@ -13,7 +13,7 @@
 			<tr>
 				<th>Id</th>
 				<th>Usuario</th>
-				<th>Elemento Fisico</th>
+				<th>Nombre del Host</th>
 				<th>Fecha Ultimo Mantenimiento</th>
 				<th>Observaciones</th>
 				<th>Editar</th>
@@ -55,7 +55,10 @@
 
 	<hr>
 		
-	{!!link_to('/hefisico/create', $title='Agregar Historial de Mantenimiento', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
+	{!!link_to('/hefisico/create', $title='Nuevo historial de mantenimiento', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/efisico', $title='Elementos físicos', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	
+	<hr>
 
 @stop
 

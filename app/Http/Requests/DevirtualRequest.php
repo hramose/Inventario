@@ -31,9 +31,6 @@ class DevirtualRequest extends Request
             'hd' => 'required|min:1', 
             'men' => 'required|min:1', 
             'act_pwd_201310' => 'required|min:1', 
-            'gestion' => 'required|min:2', 
-            'lic_so' => 'required|min:2', 
-            'lic_programas' => 'required|min:2', 
             'evirtual_id' => 'required',
         ];
     }

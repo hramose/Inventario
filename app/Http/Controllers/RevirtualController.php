@@ -3,7 +3,7 @@
 namespace Inventario\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Inventario\Red;
+use Inventario\Revirtual;
 use Inventario\Tred;
 use Inventario\Evirtual;
 use Session;
@@ -23,7 +23,7 @@ class RevirtualController extends Controller
     }
 
     public function find(Route $route){
-        $this->revirtual = Red::find($route->getParameter('revirtual'));
+        $this->revirtual = Revirtual::find($route->getParameter('revirtual'));
     }
 
     /**
@@ -33,7 +33,7 @@ class RevirtualController extends Controller
      */
     public function index()
     {
-        $revirtuals = Red::all();
+        $revirtuals = Revirtual::all();
         return view('revirtual.index', compact('revirtuals'));
     }
 
@@ -57,7 +57,7 @@ class RevirtualController extends Controller
      */
     public function store(RevirtualRequest $request)
     {
-        Red::create($request->all());
+        Revirtual::create($request->all());
         return redirect('/revirtual/create')->with('message', 'Red Creada Correctamente');
     }
 
@@ -92,7 +92,7 @@ class RevirtualController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(RevUpdateRequest $request, $id)
+    public function update(RevirtualRequest $request, $id)
     {
         $this->revirtual -> fill($request->all());
         $this->revirtual -> save();

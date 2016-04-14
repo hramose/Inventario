@@ -6,13 +6,13 @@
 </div>
 
 <div class="form-group">
-	{!!Form::label('tefisico_id','Seleccione el Tipo de Elemento (Si el tipo de elemento físico no se encuentra en la lista, da clic en el botón ver elementos físicos, luego da clic en el botón gestionar tipos de elementos físicos y agrega un nuevo tipo de elemento físico): ')!!}
+	{!!Form::label('tefisico_id','Seleccione el Hardware - Real del Elemento Físico: ')!!}
 	{!!Form::select('tefisico_id', $tipos, null, ['id'=>'tefisico_id', 'class'=>'form-control'])!!}
 </div>
 
 <div class="form-group">
-	{!!Form::label('nombre','Nombre: ')!!}
-	{!!Form::text('nombre', null, ['id'=>'nombre','class'=>'form-control', 'placeholder' => 'Ingresa el nombre del elemento fisico'])!!}
+	{!!Form::label('nombre','Nombre del Host: ')!!}
+	{!!Form::text('nombre', null, ['id'=>'nombre','class'=>'form-control', 'placeholder' => 'Ingresa el nombre del elemento físico'])!!}
 </div>
 
 <div class="form-group">

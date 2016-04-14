@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Tred extends Model
 {
-	use SoftDeletes;
+    use SoftDeletes;
 
     protected $table = 'treds';
 
@@ -16,8 +16,11 @@ class Tred extends Model
     protected $dates = ['deleted_at'];
 	
 	//Relación hasMany
-    public function reds(){
-    	return $this->hasMany('Inventario\Red');
+    public function refisicos(){
+    	return $this->hasMany('Inventario\Refisico');
     }
-
+    
+    public function revirtuals(){
+    	return $this->hasMany('Inventario\Revirtual');
+    }
 }

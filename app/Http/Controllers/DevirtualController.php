@@ -55,7 +55,7 @@ class DevirtualController extends Controller
     public function store(DevirtualRequest $request)
     {
         Devirtual::create($request->all());
-        return redirect('/oevirtual/create')->with('message', 'Descripción Creada Correctamente');
+        return redirect('/revirtual/create')->with('message', 'Descripción Creada Correctamente');
     }
 
     /**

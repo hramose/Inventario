@@ -12,17 +12,15 @@
 		<thead>
 			<tr>
 				<th>Id</th>
-				<th>Nombre</th>
-				<th>Editar</th>
-				<th>Eliminar</th>
+				<th>Hardware - Real</th>
+				<th>Opciones</th>
 			</tr>
 		</thead>
 		<tfoot>
 			<tr>
 				<th>Id</th>
-				<th>Nombre</th>
-				<th>Editar</th>
-				<th>Eliminar</th>
+				<th>Hardware - Real</th>
+				<th>Opciones</th>
 			</tr>
 		</tfoot>
 		<tbody>
@@ -31,10 +29,8 @@
 				<td>{{$tevirtual->id}}</td>
 				<td>{{$tevirtual->nombre}}</td>
 				<td>
-					{!!link_to_route('tevirtual.edit', $title = 'Editar', $parameters = $tevirtual -> id, $attributes = ['class'=>'btn btn-primary'])!!}
-				</td>
-				<td>
 					{!!Form::open(['route' => ['tevirtual.destroy', $tevirtual -> id], 'method' => 'DELETE'])!!}
+						{!!link_to_route('tevirtual.edit', $title = 'Editar', $parameters = $tevirtual -> id, $attributes = ['class'=>'btn btn-primary'])!!}
 						{!!Form::submit('Eliminar', ['class'=>'btn btn-danger'])!!}
 					{!!Form::close()!!}
 				</td>
@@ -45,8 +41,10 @@
 
 	<hr>
 		
-	{!!link_to('/tevirtual/create', $title='Agregar Tipo de Elemeto', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
-	{!!link_to('/evirtual', $title='Ver Elementos Virtuales', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
+	{!!link_to('/tevirtual/create', $title='Nuevo tipo de elemeto Virtual', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/evirtual', $title='Elementos virtuales', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	
+	<hr>
 
 @stop
 

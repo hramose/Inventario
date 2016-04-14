@@ -3,10 +3,6 @@
 @section('content')
 
 	@include('alerts.request')
-
-	{!!link_to('/tefisico', $title='Ver Tipos', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
-	{!!link_to('/fefisico', $title='Ver Fabricantes', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
-	{!!link_to('/fefisico/create', $title='Agregar Fabricante', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
 	
 	<hr>
 
@@ -18,5 +14,12 @@
 		@include('tefisico.form.tefisico')
 		{!!Form::submit('Agregar', ['class'=>'btn btn-primary'])!!}
 	{!!Form::close()!!}
+
+	<hr>
+	
+	{!!link_to('/tefisico', $title='Tipos de elemetos físicos', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/efisico', $title='Elementos físicos', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	
+	<hr>
 
 @stop

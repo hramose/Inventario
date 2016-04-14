@@ -4,8 +4,6 @@
 
   @include('alerts.request')
 
-  {!!link_to('/tevirtual', $title='Ver Tipos de Elemetos Virtuales', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
-  
   <hr>
 
   <h4><i class="fa fa-angle-right"></i> Editar Tipo de Elemento Virtual </h4>
@@ -20,5 +18,12 @@
       {!!Form::close()!!}
     </td>
   </tr>
+
+  <hr>
+
+  {!!link_to('/tevirtual', $title='Tipos de Elementos Virtuales', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+  {!!link_to('/evirtual', $title='Elementos Virtuales', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+
+  <hr>
   
 @stop

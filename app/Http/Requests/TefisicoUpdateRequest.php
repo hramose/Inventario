@@ -24,8 +24,8 @@ class TefisicoUpdateRequest extends Request
     public function rules()
     {
         return [
-            'tipo' => 'required',
-            'fabricante_id' => 'required'
+            'fabricante' => 'required',
+            'tipo' => 'required'
         ];
     }
 }

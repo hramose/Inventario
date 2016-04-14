@@ -4,10 +4,6 @@
 
 	@include('alerts.request')
 
-	{!!link_to('/oevirtual', $title='Ver Observaciones', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
-	{!!link_to('/devirtual', $title='Ver descripciones', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
-	{!!link_to('/bevirtual/create', $title='Agregar BackUp', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
-
 	<hr>
 
 	<h4><i class="fa fa-angle-right"></i> Crear Observación </h4>
@@ -17,6 +13,14 @@
 	{!!Form::open(['route'=>'oevirtual.store', 'method'=>'POST'])!!}
 		@include('oevirtual.form.oevirtual')
 		{!!Form::submit('Agregar', ['class'=>'btn btn-primary'])!!}
+		{!!link_to('/evirtual/create', $title='Si el elemento virtual no se encuentra en la lista da clic aquí', $attributes = ['class' => 'btn btn-danger'], $secure = null)!!}
 	{!!Form::close()!!}
+
+	<hr>
+
+	{!!link_to('/oevirtual', $title='Observaciones', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/evirtual', $title='Elementos virtuales', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+
+	<hr>
 
 @stop

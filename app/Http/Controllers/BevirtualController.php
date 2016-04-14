@@ -3,7 +3,7 @@
 namespace Inventario\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Inventario\Backup;
+use Inventario\Bevirtual;
 use Inventario\Evirtual;
 use Session;
 use Redirect;
@@ -20,7 +20,7 @@ class BevirtualController extends Controller
     }
 
     public function find(Route $route){
-        $this->bevirtual = Backup::find($route->getParameter('bevirtual'));
+        $this->bevirtual = Bevirtual::find($route->getParameter('bevirtual'));
     }
 
     /**
@@ -30,7 +30,7 @@ class BevirtualController extends Controller
      */
     public function index()
     {
-        $bevirtuals = Backup::all();
+        $bevirtuals = Bevirtual::all();
         return view('bevirtual.index', compact('bevirtuals'));
     }
 
@@ -53,7 +53,7 @@ class BevirtualController extends Controller
      */
     public function store(BevirtualRequest $request)
     {
-        Backup::create($request->all());
+        Bevirtual::create($request->all());
         return redirect('/revirtual/create')->with('message', 'BackUp Creado Correctamente');
     }
 

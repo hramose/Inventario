@@ -12,7 +12,7 @@
 		<thead>
 			<tr>
 				<th>Id</th>
-				<th>Elemento Físico</th>
+				<th>Nombre del Host</th>
 				<th>Fecha de BackUp</th>
 				<th>Mecanismo</th>
 				<th>Observación</th>
@@ -23,7 +23,7 @@
 		<tfoot>
 			<tr>
 				<th>Id</th>
-				<th>Elemento Físico</th>
+				<th>Nombre del Host</th>
 				<th>Fecha de BackUp</th>
 				<th>Mecanismo</th>
 				<th>Observación</th>
@@ -54,7 +54,13 @@
 
 	<hr>
 	
-	{!!link_to('/befisico/create', $title='Agregar BackUp', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
+	{!!link_to('/befisico/create', $title='Nuevo backUp', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/efisico', $title='Elementos físicos', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/defisico', $title='Descripciones', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/refisico', $title='Red', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/oefisico', $title='Observaciones', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	
+	<hr>
 
 @stop
 

@@ -9,6 +9,7 @@ use Redirect;
 use Inventario\Http\Requests;
 use Inventario\Http\Controllers\Controller;
 use Inventario\Http\Requests\TredRequest;
+use Inventario\Http\Requests\TredUpdateRequest;
 use Illuminate\Routing\Route;
 
 class TredController extends Controller
@@ -84,7 +85,7 @@ class TredController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(TredRequest $request, $id)
+    public function update(TredUpdateRequest $request, $id)
     {
         $this->tred -> fill($request->all());
         $this->tred -> save();

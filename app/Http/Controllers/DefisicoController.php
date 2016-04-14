@@ -56,7 +56,7 @@ class DefisicoController extends Controller
     public function store(DefisicoRequest $request)
     {
         Defisico::create($request->all());
-        return redirect('/oefisico/create')->with('message', 'Descripción Creada Correctamente');
+        return redirect('/refisico/create')->with('message', 'Descripción Creada Correctamente');
     }
 
     /**
@@ -89,7 +89,7 @@ class DefisicoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(DefisicoUpdateRequest $request, $id)
+    public function update(DefisicoRequest $request, $id)
     {
         $this->defisico -> fill($request->all());
         $this->defisico -> save();

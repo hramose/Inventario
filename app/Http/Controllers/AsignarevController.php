@@ -3,9 +3,9 @@
 namespace Inventario\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Inventario\Asignar_e_v;
+use Inventario\Asignarev;
 use Inventario\Evirtual;
-use Inventario\Aplicaciones;
+use Inventario\Aplicacion;
 use Session;
 use Redirect;
 use Inventario\Http\Requests;
@@ -22,7 +22,7 @@ class AsignarevController extends Controller
     }
 
     public function find(Route $route){
-        $this->asignarev = Asignar_e_v::find($route->getParameter('asignarev'));
+        $this->asignarev = Asignarev::find($route->getParameter('asignarev'));
     }
 
     /**
@@ -32,7 +32,7 @@ class AsignarevController extends Controller
      */
     public function index()
     {
-        $asignarevs = Asignar_e_v::all();
+        $asignarevs = Asignarev::all();
         return view('asignarev.index', compact('asignarevs'));
     }
 
@@ -44,8 +44,8 @@ class AsignarevController extends Controller
     public function create()
     {
         $evirtuals = Evirtual::orderBy('nombre', 'ASC')->lists('nombre', 'id');
-        $aplicaciones = Aplicaciones::orderBy('nombre', 'ASC')->lists('nombre', 'id');
-        return view('asignarev.create', compact('evirtuals', 'aplicaciones'));
+        $aplicacions = Aplicacion::orderBy('nombre', 'ASC')->lists('nombre', 'id');
+        return view('asignarev.create', compact('evirtuals', 'aplicacions'));
     }
 
     /**
@@ -56,8 +56,8 @@ class AsignarevController extends Controller
      */
     public function store(AsignarevRequest $request)
     {
-        Asignar_e_v::create($request->all());
-        return redirect('/asignarev/create')->with('message', 'Asignación Realizada Correctamente');
+        Asignarev::create($request->all());
+        return redirect('/asignarev')->with('message', 'Asignación Realizada Correctamente');
     }
 
     /**
@@ -79,10 +79,9 @@ class AsignarevController extends Controller
      */
     public function edit($id)
     {
-        $asignarev = Asignar_e_v::find($id);
         $evirtuals = Evirtual::orderBy('nombre', 'ASC')->lists('nombre', 'id');
-        $aplicaciones = Aplicaciones::orderBy('nombre', 'ASC')->lists('nombre', 'id');
-        return view('asignarev.edit', ['asignarev' => $this->asignarev], compact('evirtuals', 'aplicaciones'));
+        $aplicacions = Aplicacion::orderBy('nombre', 'ASC')->lists('nombre', 'id');
+        return view('asignarev.edit', ['asignarev' => $this->asignarev], compact('evirtuals', 'aplicacions'));
     }
 
     /**

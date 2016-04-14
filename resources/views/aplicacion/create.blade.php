@@ -4,12 +4,6 @@
 
 	@include('alerts.request')
 
-	{!!link_to('/aplicacion', $title='Ver Aplicaciones', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
-	{!!link_to('/efisico', $title='Ver Elemetos Físicos', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
-	{!!link_to('/evirtual', $title='Ver Elementos Virtuales', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
-
-	<hr>
-
 	<h4><i class="fa fa-angle-right"></i> Crear Aplicación </h4>
 
 	<hr>
@@ -18,5 +12,13 @@
 		@include('aplicacion.form.aplicacion')
 		{!!Form::submit('Agregar', ['class'=>'btn btn-primary'])!!}
 	{!!Form::close()!!}
+
+	<hr>
+
+	{!!link_to('/aplicacion', $title='Aplicaciones', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/efisico', $title='Elemetos físicos', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/evirtual', $title='Elementos virtuales', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+
+	<hr>
 
 @stop

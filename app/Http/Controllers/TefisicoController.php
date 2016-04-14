@@ -4,7 +4,6 @@ namespace Inventario\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Inventario\Tefisico;
-use Inventario\Fabricante;
 use Session;
 use Redirect;
 use Inventario\Http\Requests;
@@ -43,8 +42,7 @@ class TefisicoController extends Controller
      */
     public function create()
     {
-        $marcas = Fabricante::orderBy('marca', 'ASC')->lists('marca', 'id');
-        return view('tefisico.create', compact('marcas'));
+        return view('tefisico.create');
     }
 
     /**
@@ -78,8 +76,7 @@ class TefisicoController extends Controller
      */
      public function edit($id)
     {
-        $marcas = Fabricante::orderBy('marca', 'ASC')->lists('marca', 'id');
-        return view('tefisico.edit', ['tefisico' => $this->tefisico], compact('marcas'));
+        return view('tefisico.edit', ['tefisico' => $this->tefisico]);
     }
 
     /**

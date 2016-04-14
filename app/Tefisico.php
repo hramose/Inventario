@@ -11,16 +11,11 @@ class Tefisico extends Model
 
     protected $table = 'tefisicos';
 
-    protected $fillable = ['tipo', 'fabricante_id'];
+    protected $fillable = ['fabricante', 'tipo'];
 
     protected $dates = ['deleted_at'];
 
-    //Relación belongsTo
-    public function fabricante(){
-    	return $this->belongsTo('Inventario\Fabricante');
-    }
-
-    //Relación hasMany
+	//Relación hasMany
     public function efisicos(){
     	return $this->hasMany('Inventario\Efisico');
     }

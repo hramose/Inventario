@@ -4,8 +4,6 @@
 
   @include('alerts.request')
 
-  {!!link_to('/tefisico', $title='Ver Tipos', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
-  
   <hr>
 
   <h4><i class="fa fa-angle-right"></i> Editar Tipo de Elemento Físico </h4>
@@ -20,5 +18,12 @@
       {!!Form::close()!!}
     </td>
   </tr>
+
+  <hr>
+
+  {!!link_to('/tefisico', $title='Tipos de elementos físicos', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+  {!!link_to('/efisico', $title='Elementos físicos', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
   
+  <hr>
+
 @stop

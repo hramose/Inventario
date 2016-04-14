@@ -24,8 +24,8 @@ class TefisicoRequest extends Request
     public function rules()
     {
         return [
-            'tipo' => 'required',
-            'fabricante_id' => 'required'
+            'fabricante' => 'required|unique:tefisicos',
+            'tipo' => 'required'
         ];
     }
 }

@@ -60,9 +60,14 @@
 
 	<hr>
 	
-	{!!link_to('/revirtual/create', $title='Agregar Red', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
-	{!!link_to('/tred', $title='Gestionar Tipos de Redes', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
-	{!!link_to('/evirtual', $title='Ver Elementos Virtuales', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
+	{!!link_to('/revirtual/create', $title='Nueva red', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/tred', $title='Tipos de redes', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/evirtual', $title='Elementos virtuales', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/devirtual', $title='Descripciones', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/oevirtual', $title='Observaciones', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/bevirtual', $title='Backup´s', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	
+	<hr>
 
 @stop
 

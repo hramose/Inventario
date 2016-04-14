@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Refisico extends Model
 {
-	use SoftDeletes;
+    use SoftDeletes;
 
     protected $table = 'refisicos';
 

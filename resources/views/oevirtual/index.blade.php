@@ -50,8 +50,14 @@
 	</table>
 
 	<hr>
+	
+	{!!link_to('/oevirtual/create', $title='Nueva observación', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/evirtual', $title='Elementos virtuales', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/devirtual', $title='Descripciones', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/revirtual', $title='Red', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/bevirtual', $title='Backup´s', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
 
-	{!!link_to('/oevirtual/create', $title='Agregar Observación', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
+	<hr>
 
 @stop
 

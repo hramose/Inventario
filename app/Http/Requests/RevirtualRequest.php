@@ -24,11 +24,9 @@ class RevirtualRequest extends Request
     public function rules()
     {
         return [
-            'eth' => 'required', 
-            'vlan'=> 'required', 
-            'ip'=> 'required', 
-            'gateway'=> 'required', 
-            'tred_id'=> 'required', 
+            'tred_id'=> 'required',
+            'eth' => 'required',
+            'ip'=> 'required',  
             'evirtual_id'=> 'required',
         ];
     }

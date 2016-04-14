@@ -4,8 +4,6 @@
 
   @include('alerts.request')
 
-  {!!link_to('/asignarev', $title='Ver Asignaciones', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
-
   <hr>
 
   <h4><i class="fa fa-angle-right"></i> Editar Asignación </h4>
@@ -21,4 +19,12 @@
     </td>
   </tr>
   
+  <hr>
+
+  {!!link_to('/asignarev', $title='Asignaciones', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+  {!!link_to('/aplicacion', $title='Aplicaciones', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+  {!!link_to('/evirtual', $title='Elementos virtuales', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+  
+  <hr>
+
 @stop

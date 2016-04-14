@@ -12,7 +12,7 @@
 		<thead>
 			<tr>
 				<th>Id</th>
-				<th>Elemento Fisico</th>
+				<th>Nombre del Host</th>
 				<th>Ubicación</th>
 				<th>Health Status</th>
 				<th>Sistema Operativo</th>
@@ -39,7 +39,7 @@
 		<tfoot>
 			<tr>
 				<th>Id</th>
-				<th>Elemento Fisico</th>
+				<th>Nomnre del Host</th>
 				<th>Ubicación</th>
 				<th>Health Status</th>
 				<th>Sistema Operativo</th>
@@ -103,7 +103,13 @@
 
 	<hr>
 
-	{!!link_to('/defisico/create', $title='Agregar Descripción', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
+	{!!link_to('/defisico/create', $title='Nueva descripción', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/efisico', $title='Elementos físicos', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/refisico', $title='Red', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/oefisico', $title='Observaciones', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/befisico', $title='Backup´s', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+
+	<hr>
 
 @stop
 

@@ -25,9 +25,7 @@ class RefisicoRequest extends Request
     {
         return [
             'eth' => 'required', 
-            'vlan'=> 'required', 
             'ip'=> 'required', 
-            'gateway'=> 'required', 
             'tred_id'=> 'required', 
             'efisico_id'=> 'required',
         ];

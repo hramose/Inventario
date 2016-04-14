@@ -25,7 +25,7 @@ class AsignarevRequest extends Request
     {
         return [
             'evirtual_id' => 'required', 
-            'aplicaciones_id' => 'required'
+            'aplicacion_id' => 'required'
         ];
     }
 }

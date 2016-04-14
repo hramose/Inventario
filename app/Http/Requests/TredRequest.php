@@ -24,7 +24,7 @@ class TredRequest extends Request
     public function rules()
     {
         return [
-            'tipo_red' => 'required|min:4',
+            'tipo_red' => 'required|unique:treds',
         ];
     }
 }

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Tevirtual extends Model
 {
-	use SoftDeletes;
+    use SoftDeletes;
 
     protected $table = 'tevirtuals';
 

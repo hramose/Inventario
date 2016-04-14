@@ -74,8 +74,14 @@
 	</table>
 
 	<hr>
-		
-	{!!link_to('/devirtual/create', $title='Agregar Descripción', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
+
+	{!!link_to('/devirtual/create', $title='Nueva descripción', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/evirtual', $title='Elementos Virtuales', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/revirtual', $title='Red', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/oevirtual', $title='Observaciones', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/bevirtual', $title='Backup´s', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+
+	<hr>
 
 @stop
 

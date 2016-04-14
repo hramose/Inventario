@@ -3,9 +3,9 @@
 namespace Inventario\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Inventario\Asignar_e_f;
+use Inventario\Asignaref;
 use Inventario\Efisico;
-use Inventario\Aplicaciones;
+use Inventario\Aplicacion;
 use Session;
 use Redirect;
 use Inventario\Http\Requests;
@@ -22,7 +22,7 @@ class AsignarefController extends Controller
     }
 
     public function find(Route $route){
-        $this->asignaref = Asignar_e_f::find($route->getParameter('asignaref'));
+        $this->asignaref = Asignaref::find($route->getParameter('asignaref'));
     }
 
     /**
@@ -32,7 +32,7 @@ class AsignarefController extends Controller
      */
     public function index()
     {
-        $asignarefs = Asignar_e_f::all();
+        $asignarefs = Asignaref::all();
         return view('asignaref.index', compact('asignarefs'));
     }
 
@@ -44,8 +44,8 @@ class AsignarefController extends Controller
     public function create()
     {
         $efisicos = Efisico::orderBy('nombre', 'ASC')->lists('nombre', 'id');
-        $aplicaciones = Aplicaciones::orderBy('nombre', 'ASC')->lists('nombre', 'id');
-        return view('asignaref.create', compact('efisicos', 'aplicaciones'));
+        $aplicacions = Aplicacion::orderBy('nombre', 'ASC')->lists('nombre', 'id');
+        return view('asignaref.create', compact('efisicos', 'aplicacions'));
     }
 
     /**
@@ -56,8 +56,8 @@ class AsignarefController extends Controller
      */
     public function store(AsignarefRequest $request)
     {
-        Asignar_e_f::create($request->all());
-        return redirect('/asignaref/create')->with('message', 'Asignación Realizada Correctamente');
+        Asignaref::create($request->all());
+        return redirect('/asignaref')->with('message', 'Asignación Realizada Correctamente');
     }
 
     /**
@@ -80,8 +80,8 @@ class AsignarefController extends Controller
     public function edit($id)
     {
         $efisicos = Efisico::orderBy('nombre', 'ASC')->lists('nombre', 'id');
-        $aplicaciones = Aplicaciones::orderBy('nombre', 'ASC')->lists('nombre', 'id');
-        return view('asignaref.edit', ['asignaref' => $this->asignaref], compact('efisicos', 'aplicaciones'));
+        $aplicacions = Aplicaciones::orderBy('nombre', 'ASC')->lists('nombre', 'id');
+        return view('asignaref.edit', ['asignaref' => $this->asignaref], compact('efisicos', 'aplicacions'));
     }
 
     /**

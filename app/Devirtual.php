@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Devirtual extends Model
 {
-	use SoftDeletes;
+    use SoftDeletes;
 
     protected $table = 'devirtuals';
 

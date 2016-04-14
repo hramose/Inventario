@@ -4,10 +4,6 @@
 
 	@include('alerts.request')
 
-	{!!link_to('/refisico', $title='Ver Redes', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
-	{!!link_to('/befisico', $title='Ver BackUp´s', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
-	{!!link_to('/efisico/create', $title='Agregar Elemento Físico', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
-
 	<hr>
 
 	<h4><i class="fa fa-angle-right"></i> Crear Red </h4>
@@ -17,6 +13,14 @@
 	{!!Form::open(['route'=>'refisico.store', 'method'=>'POST'])!!}
 		@include('refisico.form.refisico')
 		{!!Form::submit('Agregar', ['class'=>'btn btn-primary'])!!}
+		{!!link_to('/efisico/create', $title='Si el elemento físico no se encuentra en la lista o desea agregar uno nuevo da clic aquí', $attributes = ['class' => 'btn btn-danger'], $secure = null)!!}
 	{!!Form::close()!!}
+
+	<hr>
+	
+	{!!link_to('/refisico', $title='Redes', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/efisico', $title='Elementos físicos', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	
+	<hr>
 
 @stop

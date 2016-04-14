@@ -31,11 +31,10 @@ Route::get('logout', 'LogController@logout');
 | Rutas Elementos Fisicos
 |---------------------------------------------------------------------------
 */
-Route::resource('efisico', 'E_FisicoController');
-Route::resource('fefisico', 'FabricanteController');
+Route::resource('efisico', 'EfisicoController');
 Route::resource('tefisico', 'TefisicoController');
-Route::resource('hefisico', 'HefisicoController');
 Route::resource('defisico', 'DefisicoController');
+Route::resource('hefisico', 'HefisicoController');
 Route::resource('oefisico', 'OefisicoController');
 Route::resource('befisico', 'BefisicoController');
 Route::resource('refisico', 'RefisicoController');
@@ -45,7 +44,7 @@ Route::resource('tred', 'TredController');
 | Rutas Elementos Virtuales
 |---------------------------------------------------------------------------
 */
-Route::resource('evirtual', 'E_VirtualController');
+Route::resource('evirtual', 'EvirtualController');
 Route::resource('tevirtual', 'TevirtualController');
 Route::resource('devirtual', 'DevirtualController');
 Route::resource('oevirtual', 'OevirtualController');
@@ -56,7 +55,7 @@ Route::resource('revirtual', 'RevirtualController');
 | Rutas Aplicaciones
 |---------------------------------------------------------------------------
 */
-Route::resource('aplicacion', 'AplicacionesController');
-Route::resource('daplicacion', 'DaplicacionesController');
+Route::resource('aplicacion', 'AplicacionController');
+Route::resource('daplicacion', 'DaplicacionController');
 Route::resource('asignaref', 'AsignarefController');
 Route::resource('asignarev', 'AsignarevController');

@@ -4,8 +4,6 @@
 
   @include('alerts.request')
 
-  {!!link_to('/hefisico', $title='Ver Historiales', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
-  
   <hr>
 
   <h4><i class="fa fa-angle-right"></i> Editar Historial de Mantenimiento </h4>
@@ -20,5 +18,12 @@
       {!!Form::close()!!}
     </td>
   </tr>
+
+  <hr>
+
+  {!!link_to('/hefisico', $title='Historiales', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+  {!!link_to('/hefisico', $title='Elementos Físicos', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+
+  <hr>
   
 @stop

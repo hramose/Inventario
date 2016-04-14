@@ -30,14 +30,18 @@ class Evirtual extends Model
     }
 
     public function observaciones(){
-    	return $this->hasMany('Inventario\Observaciones');
+    	return $this->hasMany('Inventario\Oevirtual');
     }
 
     public function backups(){
-    	return $this->hasMany('Inventario\Backup');
+    	return $this->hasMany('Inventario\Bevirtual');
     }
 
     public function reds(){
-    	return $this->hasMany('Inventario\Red');
+    	return $this->hasMany('Inventario\Revirtual');
+    }
+
+    public function asignarevs(){
+    	return $this->hasMany('Inventario\Asignarev');
     }
 }
