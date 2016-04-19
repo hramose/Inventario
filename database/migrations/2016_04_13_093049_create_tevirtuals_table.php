@@ -14,7 +14,7 @@ class CreateTevirtualsTable extends Migration
     {
         Schema::create('tevirtuals', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nombre');
+            $table->string('hardreal');
             $table->timestamps();
             $table -> softDeletes();
         });

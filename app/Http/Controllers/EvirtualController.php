@@ -46,7 +46,7 @@ class EvirtualController extends Controller
     public function create()
     {
         $efisicos = Efisico::orderBy('nombre', 'ASC')->lists('nombre', 'id');
-        $tipos = Tevirtual::orderBy('nombre', 'ASC')->lists('nombre', 'id');
+        $tipos = Tevirtual::orderBy('hardreal', 'ASC')->lists('hardreal', 'id');
         return view('evirtual.create', compact('efisicos', 'tipos'));
     }
 
@@ -82,7 +82,7 @@ class EvirtualController extends Controller
      public function edit($id)
     {
         $efisicos = Efisico::orderBy('nombre', 'ASC')->lists('nombre', 'id');
-        $tipos = Tevirtual::orderBy('nombre', 'ASC')->lists('nombre', 'id');
+        $tipos = Tevirtual::orderBy('hardreal', 'ASC')->lists('hardreal', 'id');
         return view('evirtual.edit', ['evirtual' => $this->evirtual], compact('efisicos', 'tipos'));
     }
 

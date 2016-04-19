@@ -29,8 +29,8 @@
 			@foreach($asignarevs as $asignarev)
 			<tr>
 				<td>{{$asignarev->id}}</td>
-				<td>{{$asignarev->evirtual->nombre}}</td>
-				<td>{{$asignarev->aplicacion->nombre}}</td>
+				<td>{{$asignarev->evirtual->nomevirtual}}</td>
+				<td>{{$asignarev->aplicacion->nomapp}}</td>
 				<td>
 					{!!Form::open(['route' => ['asignarev.destroy', $asignarev -> id], 'method' => 'DELETE'])!!}
 						{!!link_to_route('asignarev.edit', $title = 'Editar', $parameters = $asignarev -> id, $attributes = ['class'=>'btn btn-primary'])!!}

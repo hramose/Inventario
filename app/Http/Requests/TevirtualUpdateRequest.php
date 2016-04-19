@@ -24,7 +24,7 @@ class TevirtualUpdateRequest extends Request
     public function rules()
     {
         return [
-            'nombre' => 'required',
+            'hardreal' => 'required',
         ];
     }
 }

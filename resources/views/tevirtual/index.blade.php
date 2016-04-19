@@ -27,7 +27,7 @@
 			@foreach($tevirtuals as $tevirtual)
 			<tr>
 				<td>{{$tevirtual->id}}</td>
-				<td>{{$tevirtual->nombre}}</td>
+				<td>{{$tevirtual->hardreal}}</td>
 				<td>
 					{!!Form::open(['route' => ['tevirtual.destroy', $tevirtual -> id], 'method' => 'DELETE'])!!}
 						{!!link_to_route('tevirtual.edit', $title = 'Editar', $parameters = $tevirtual -> id, $attributes = ['class'=>'btn btn-primary'])!!}

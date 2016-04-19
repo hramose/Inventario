@@ -11,7 +11,7 @@ class Evirtual extends Model
 
     protected $table = 'evirtuals';
 
-    protected $fillable = ['nombre', 'estado', 'efisico_id', 'tevirtual_id'];
+    protected $fillable = ['nomevirtual', 'tipo','estado', 'efisico_id', 'tevirtual_id'];
 
     protected $dates = ['deleted_at'];
 
@@ -43,5 +43,11 @@ class Evirtual extends Model
 
     public function asignarevs(){
     	return $this->hasMany('Inventario\Asignarev');
+    }
+
+    //Relación belongsToMany
+    public function aplicacions(){
+        return $this->belongsToMany('Inventario\Aplicacion', 'asignarevs')
+            ->withPivot('evirtual_id');
     }
 }

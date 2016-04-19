@@ -11,8 +11,13 @@
 </div>
 
 <div class="form-group">
-	{!!Form::label('nombre','Nombre del Host: ')!!}
-	{!!Form::text('nombre', null, ['id'=>'nombre','class'=>'form-control', 'placeholder' => 'Ingresa el nombre del elemento fisico'])!!}
+	{!!Form::label('nomevirtual','Nombre del Host: ')!!}
+	{!!Form::text('nomevirtual', null, ['id'=>'nomevirtual','class'=>'form-control', 'placeholder' => 'Ingresa el nombre del elemento fisico'])!!}
+</div>
+
+<div class="form-group">
+	{!!Form::label('tipo','Tipo: ')!!}
+	{!!Form::text('tipo', null, ['id'=>'tipo','class'=>'form-control', 'placeholder' => 'Ingresa el tipo de elemento virtual'])!!}
 </div>
 
 <div class="form-group">

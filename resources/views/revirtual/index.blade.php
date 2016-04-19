@@ -39,7 +39,7 @@
 			@foreach($revirtuals as $revirtual)
 			<tr>
 				<td>{{$revirtual->id}}</td>
-				<td>{{$revirtual->evirtual->nombre}}</td>
+				<td>{{$revirtual->evirtual->nomevirtual}}</td>
 				<td>{{$revirtual->tred->tipo_red}}</td>
 				<td>{{$revirtual->eth}}</td>
 				<td>{{$revirtual->ip}}</td>

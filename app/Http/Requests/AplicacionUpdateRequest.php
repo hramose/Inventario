@@ -24,7 +24,7 @@ class AplicacionUpdateRequest extends Request
     public function rules()
     {
         return [
-            'nombre' => 'required'
+            'nomapp' => 'required'
         ];
     }
 }

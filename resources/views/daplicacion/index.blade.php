@@ -33,7 +33,7 @@
 			@foreach($daplicacions as $daplicacion)
 			<tr>
 				<td>{{$daplicacion->id}}</td>
-				<td>{{$daplicacion->aplicacion->nombre}}</td>
+				<td>{{$daplicacion->aplicacion->nomapp}}</td>
 				<td>{{$daplicacion->descripcion}}</td>
 				<td>{{$daplicacion->version}}</td>
 				<td>

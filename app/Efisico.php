@@ -52,4 +52,10 @@ class Efisico extends Model
     public function asiganarefs(){
         return $this->hasMany('Inventario\Asignaref');
     }
+
+    //Relación belongsToMany
+    public function aplicacions(){
+        return $this->belongsToMany('Inventario\Aplicacion', 'asignarefs')
+            ->withPivot('efisico_id');
+    }
 }

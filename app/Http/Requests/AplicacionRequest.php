@@ -24,7 +24,7 @@ class AplicacionRequest extends Request
     public function rules()
     {
         return [
-            'nombre' => 'required|unique:aplicacions'
+            'nomapp' => 'required|unique:aplicacions'
         ];
     }
 }

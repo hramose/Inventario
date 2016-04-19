@@ -35,7 +35,7 @@
 			@foreach($bevirtuals as $bevirtual)
 			<tr>
 				<td>{{$bevirtual->id}}</td>
-				<td>{{$bevirtual->evirtual->nombre}}</td>
+				<td>{{$bevirtual->evirtual->nomevirtual}}</td>
 				<td>{{$bevirtual->fec_backup}}</td>
 				<td>{{$bevirtual->mecanismo}}</td>
 				<td>{{$bevirtual->observacion}}</td>

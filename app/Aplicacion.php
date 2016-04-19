@@ -11,7 +11,7 @@ class Aplicacion extends Model
 
     protected $table = 'aplicacions';
 
-    protected $fillable = ['nombre'];
+    protected $fillable = ['nomapp'];
 
     protected $dates = ['deleted_at'];
 
@@ -22,5 +22,16 @@ class Aplicacion extends Model
 
     public function asiganarevs(){
         return $this->hasMany('Inventario\Asignarev');
+    }
+
+    //Relación belongsToMany
+    public function evirtuals(){
+        return $this->belongsToMany('Inventario\Evirtual', 'asignarevs')
+            ->withPivot('aplicacion_id');
+    }
+
+    public function efisicos(){
+        return $this->belongsToMany('Inventario\Efisico', 'asignarefs')
+            ->withPivot('aplicacion_id');
     }
 }

@@ -24,7 +24,7 @@ class TevirtualRequest extends Request
     public function rules()
     {
         return [
-            'nombre' => 'required|unique:tevirtuals',
+            'hardreal' => 'required|unique:tevirtuals',
         ];
     }
 }

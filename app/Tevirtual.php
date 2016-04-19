@@ -11,7 +11,7 @@ class Tevirtual extends Model
 
     protected $table = 'tevirtuals';
 
-    protected $fillable = ['nombre'];
+    protected $fillable = ['hardreal'];
 
     protected $dates = ['deleted_at'];
 

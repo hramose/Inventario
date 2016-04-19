@@ -13,8 +13,9 @@
 			<tr>
 				<th>Id</th>
 				<th>Elemento Físico</th>
-				<th>Hardware - Real</th>
 				<th>Nombre del Host</th>
+				<th>Hardware - Real</th>
+				<th>Tipo</th>
 				<th>Estado</th>
 				<th>Editar</th>
 				<th>Eliminar</th>
@@ -24,8 +25,9 @@
 			<tr>
 				<th>Id</th>
 				<th>Elemento Físico</th>
-				<th>Hardware - Real</th>
 				<th>Nombre del Host</th>
+				<th>Hardware - Real</th>
+				<th>Tipo</th>
 				<th>Estado</th>
 				<th>Editar</th>
 				<th>Eliminar</th>
@@ -36,8 +38,9 @@
 			<tr>
 				<td>{{$evirtual->id}}</td>
 				<td>{{$evirtual->efisico->nombre}}</td>
-				<td>{{$evirtual->tevirtual->nombre}}</td>
-				<td>{{$evirtual->nombre}}</td>
+				<td>{{$evirtual->nomevirtual}}</td>
+				<td>{{$evirtual->tevirtual->hardreal}}</td>
+				<td>{{$evirtual->tipo}}</td>
 				<td>{{$evirtual->estado}}</td>
 				<td>
 					{!!link_to_route('evirtual.edit', $title = 'Editar', $parameters = $evirtual -> id, $attributes = ['class'=>'btn btn-primary'])!!}

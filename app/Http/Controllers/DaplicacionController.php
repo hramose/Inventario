@@ -42,7 +42,7 @@ class DaplicacionController extends Controller
      */
     public function create()
     {
-        $aplicacions = Aplicacion::orderBy('nombre', 'ASC')->lists('nombre', 'id');
+        $aplicacions = Aplicacion::orderBy('nomapp', 'ASC')->lists('nomapp', 'id');
         return view('daplicacion.create', compact('aplicacions'));
     }
 
@@ -77,7 +77,7 @@ class DaplicacionController extends Controller
      */
      public function edit($id)
     {
-        $daplicacions = Aplicacion::orderBy('nombre', 'ASC')->lists('nombre', 'id');
+        $daplicacions = Aplicacion::orderBy('nomapp', 'ASC')->lists('nomapp', 'id');
         return view('daplicacion.edit', ['daplicacion' => $this->daplicacion], compact('daplicacions'));
     }
 

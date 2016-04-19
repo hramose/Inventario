@@ -12,6 +12,7 @@
           <span> Elementos Físicos </span>
         </a>
         <ul class="sub">
+          <li><a  href="{!!URL::to('/eresumenf')!!}"><i class="fa fa-server fa-fw"></i> Resumen </a></li>
           <li><a  href="{!!URL::to('/efisico')!!}"><i class="fa fa-server fa-fw"></i> Elementos Físicos </a></li>
           <li><a  href="{!!URL::to('/hefisico')!!}"><i class="fa fa-list fa-fw"></i> Historial Mantenimiento </a></li>
           <li><a  href="{!!URL::to('/defisico')!!}"><i class="fa fa-book fa-fw"></i> Descripción </a></li>
@@ -27,6 +28,7 @@
           <span> Elementos Virtuales </span>
         </a>
         <ul class="sub">
+          <li><a  href="{!!URL::to('/eresumenv')!!}"><i class="fa fa-server fa-fw"></i> Resumen </a></li>
           <li><a  href="{!!URL::to('/evirtual')!!}"><i class="fa fa-server fa-fw"></i> Elementos Virtuales </a></li>
           <li><a  href="{!!URL::to('/devirtual')!!}"><i class="fa fa-book fa-fw"></i> Descripción </a></li>
           <li><a  href="{!!URL::to('/oevirtual')!!}"><i class="fa fa-comment fa-fw"></i> Observaciones </a></li>

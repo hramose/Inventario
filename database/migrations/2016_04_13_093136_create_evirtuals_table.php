@@ -14,7 +14,7 @@ class CreateEvirtualsTable extends Migration
     {
         Schema::create('evirtuals', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nombre')->unique();
+            $table->string('nomevirtual')->unique();
             $table->enum('estado', ['operativo','apagado']);
             $table->integer('efisico_id')->unsigned();
             $table->foreign('efisico_id')->references('id')->on('efisicos')

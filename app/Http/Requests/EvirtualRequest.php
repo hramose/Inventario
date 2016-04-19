@@ -24,7 +24,8 @@ class EvirtualRequest extends Request
     public function rules()
     {
         return [
-            'nombre' => 'required|unique:evirtuals', 
+            'nomevirtual' => 'required|unique:evirtuals', 
+            'tipo' => 'required', 
             'estado' => 'required|in:operativo,apagado', 
             'efisico_id' => 'required', 
             'tevirtual_id' => 'required',

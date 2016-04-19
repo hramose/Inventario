@@ -33,7 +33,7 @@
 			@foreach($oevirtuals as $oevirtual)
 			<tr>
 				<td>{{$oevirtual->id}}</td>
-				<td>{{$oevirtual->evirtual->nombre}}</td>
+				<td>{{$oevirtual->evirtual->nomevirtual}}</td>
 				<td>{{$oevirtual->observaciones}}</td>
 				<td>{{$oevirtual->reali_por}}</td>
 				<td>

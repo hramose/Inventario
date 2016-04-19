@@ -20,7 +20,8 @@
 	
 	{!!link_to('/revirtual', $title='Redes', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
 	{!!link_to('/evirtual', $title='Elementos virtuales', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
-	
+	{!!link_to('/asignarev/create', $title='Si desea asignarle una aplicación al elemento virtual da clic aquí', $attributes = ['class' => 'btn btn-warning'], $secure = null)!!}
+
 	<hr>
 
 @stop

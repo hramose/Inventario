@@ -15,16 +15,14 @@
 			<tr>
 				<th>Nombre</th>
 				<th>Correo</th>
-				<th>Eliminar</th>
-				<th>Editar</th>
+				<th>Operaciones</th>
 			</tr>
 		</thead>
 		<tfoot>
 			<tr>
 				<th>Nombre</th>
 				<th>Correo</th>
-				<th>Eliminar</th>
-				<th>Editar</th>
+				<th>Operaciones</th>
 			</tr>
 		</tfoot>
 		<tbody>
@@ -33,10 +31,8 @@
 				<td>{{$user->name}}</td>
 				<td>{{$user->email}}</td>
 				<td>
-					{!!link_to_route('usuario.edit', $title = 'Editar', $parameters = $user -> id, $attributes = ['class'=>'btn btn-primary'])!!}
-				</td>
-				<td>
 					{!!Form::open(['route' => ['usuario.destroy', $user -> id], 'method' => 'DELETE'])!!}
+						{!!link_to_route('usuario.edit', $title = 'Editar', $parameters = $user -> id, $attributes = ['class'=>'btn btn-primary'])!!}
 						{!!Form::submit('Eliminar', ['class'=>'btn btn-danger'])!!}
 					{!!Form::close()!!}
 				</td>

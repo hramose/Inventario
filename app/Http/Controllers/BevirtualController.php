@@ -41,7 +41,7 @@ class BevirtualController extends Controller
      */
     public function create()
     {
-        $evirtuals = Evirtual::orderBy('nombre', 'ASC')->lists('nombre', 'id');
+        $evirtuals = Evirtual::orderBy('nomevirtual', 'ASC')->lists('nomevirtual', 'id');
         return view('bevirtual.create', compact('evirtuals'));
     }
 
@@ -76,7 +76,7 @@ class BevirtualController extends Controller
      */
     public function edit($id)
     {
-        $evirtuals = Evirtual::orderBy('nombre', 'ASC')->lists('nombre', 'id');
+        $evirtuals = Evirtual::orderBy('nomevirtual', 'ASC')->lists('nomevirtual', 'id');
         return view('bevirtual.edit', ['bevirtual' => $this->bevirtual], compact('evirtuals'));
     }
 

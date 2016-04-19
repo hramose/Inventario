@@ -1,12 +1,12 @@
 @include('alerts.success')
 
 <div class="form-group">
-	{!!Form::label('evirtual_id','Seleccione el Elemento Virtual: ')!!}
+	{!!Form::label('evirtual_id','Seleccione el Nombre del Host: ')!!}
 	{!!Form::select('evirtual_id', $evirtuals, null, ['id'=>'evirtual_id', 'class'=>'form-control'])!!}
 </div>
 
 <div class="form-group">
-	{!!Form::label('tred_id','Seleccione el Tipo de Red (Si el tipo de red no se encuentra en la lista, da clic en el botón ver redes, luego da clic en el botón gestionar tipos de redes y agrega un nuevo tipo de red): ')!!}
+	{!!Form::label('tred_id','Seleccione el Tipo de Red: ')!!}
 	{!!Form::select('tred_id', $treds, null, ['id'=>'tred_id', 'class'=>'form-control'])!!}
 </div>
 

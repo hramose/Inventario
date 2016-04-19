@@ -30,7 +30,7 @@
 			<tr>
 				<td>{{$asignaref->id}}</td>
 				<td>{{$asignaref->efisico->nombre}}</td>
-				<td>{{$asignaref->aplicacion->nombre}}</td>
+				<td>{{$asignaref->aplicacion->nomapp}}</td>
 				<td>
 					{!!Form::open(['route' => ['asignaref.destroy', $asignaref -> id], 'method' => 'DELETE'])!!}
 						{!!link_to_route('asignaref.edit', $title = 'Editar', $parameters = $asignaref -> id, $attributes = ['class'=>'btn btn-primary'])!!}

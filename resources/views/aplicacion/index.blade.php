@@ -27,7 +27,7 @@
 			@foreach($aplicacions as $aplicacion)
 			<tr>
 				<td>{{$aplicacion->id}}</td>
-				<td>{{$aplicacion->nombre}}</td>
+				<td>{{$aplicacion->nomapp}}</td>
 				<td>
 					{!!Form::open(['route' => ['aplicacion.destroy', $aplicacion -> id], 'method' => 'DELETE'])!!}
 						{!!link_to_route('aplicacion.edit', $title = 'Editar', $parameters = $aplicacion -> id, $attributes = ['class'=>'btn btn-primary'])!!}

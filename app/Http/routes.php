@@ -19,6 +19,8 @@ Route::get('/', 'FrontController@login');
 Route::get('index', 'FrontController@index');
 Route::get('admin', 'FrontController@admin');
 Route::resource('usuario', 'UsuarioController');
+Route::get('eresumenf', 'ResumenController@eresumenf');
+Route::get('eresumenv', 'ResumenController@eresumenv');
 /*
 |---------------------------------------------------------------------------
 | Rutas Log (Login-Logout)

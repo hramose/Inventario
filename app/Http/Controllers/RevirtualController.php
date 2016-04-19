@@ -44,7 +44,7 @@ class RevirtualController extends Controller
      */
     public function create()
     {
-        $evirtuals = Evirtual::orderBy('nombre', 'ASC')->lists('nombre', 'id');
+        $evirtuals = Evirtual::orderBy('nomevirtual', 'ASC')->lists('nomevirtual', 'id');
         $treds = Tred::orderBy('tipo_red', 'ASC')->lists('tipo_red', 'id');
         return view('revirtual.create', compact('evirtuals', 'treds'));
     }
@@ -80,7 +80,7 @@ class RevirtualController extends Controller
      */
     public function edit($id)
     {
-        $evirtuals = Evirtual::orderBy('nombre', 'ASC')->lists('nombre', 'id');
+        $evirtuals = Evirtual::orderBy('nomevirtual', 'ASC')->lists('nomevirtual', 'id');
         $treds = Tred::orderBy('tipo_red', 'ASC')->lists('tipo_red', 'id');
         return view('revirtual.edit', ['revirtual' => $this->revirtual], compact('evirtuals', 'treds'));
     }

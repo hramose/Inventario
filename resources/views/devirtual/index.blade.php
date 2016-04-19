@@ -12,7 +12,7 @@
 		<thead>
 			<tr>
 				<th>Id</th>
-				<th>Elemento Virtual</th>
+				<th>Nombre del Host</th>
 				<th>Ubicación</th>
 				<th>Health Status</th>
 				<th>Sistema Operativo</th>
@@ -30,7 +30,7 @@
 		<tfoot>
 			<tr>
 				<th>Id</th>
-				<th>Elemento Virtual</th>
+				<th>Nombre del Host</th>
 				<th>Ubicación</th>
 				<th>Health Status</th>
 				<th>Sistema Operativo</th>
@@ -49,7 +49,7 @@
 			@foreach($devirtuals as $devirtual)
 			<tr>
 				<td>{{$devirtual->id}}</td>
-				<td>{{$devirtual->evirtual->nombre}}</td>
+				<td>{{$devirtual->evirtual->nomevirtual}}</td>
 				<td>{{$devirtual->ubicacion}}</td>
 				<td>{{$devirtual->h_status}}</td>
 				<td>{{$devirtual->so}}</td>

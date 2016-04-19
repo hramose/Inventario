@@ -2,9 +2,7 @@
 
 @section('content')
 	
-	@include('alerts.success')
-
-	<h3><i class="fa fa-angle-right"></i> Descripciones </h3>
+	<h3><i class="fa fa-angle-right"></i> Elementos Físicos </h3>
 
 	<hr>
 
@@ -13,6 +11,9 @@
 			<tr>
 				<th>Id</th>
 				<th>Nombre del Host</th>
+				<th>Hardware - Real</th>
+				<th>Tipo</th>
+				<th>Estado</th>
 				<th>Ubicación</th>
 				<th>Health Status</th>
 				<th>Sistema Operativo</th>
@@ -32,14 +33,15 @@
 				<th>Licencia del Programa</th>
 				<th>Producto</th>
 				<th>Contrato</th>
-				<th>Editar</th>
-				<th>Eliminar</th>
 			</tr>			
 		</thead>
 		<tfoot>
 			<tr>
 				<th>Id</th>
 				<th>Nombre del Host</th>
+				<th>Hardware - Real</th>
+				<th>Tipo</th>
+				<th>Estado</th>
 				<th>Ubicación</th>
 				<th>Health Status</th>
 				<th>Sistema Operativo</th>
@@ -59,42 +61,35 @@
 				<th>Licencia del Programa</th>
 				<th>Producto</th>
 				<th>Contrato</th>
-				<th>Editar</th>
-				<th>Eliminar</th>
 			</tr>			
 		</tfoot>
 		<tbody>
-			@foreach($defisicos as $defisico)
+			@foreach($efisicos as $efisico)				
 			<tr>
-				<td>{{$defisico->id}}</td>
-				<td>{{$defisico->efisico->nombre}}</td>
-				<td>{{$defisico->ubicacion}}</td>
-				<td>{{$defisico->h_status}}</td>
-				<td>{{$defisico->so}}</td>
-				<td>{{$defisico->cpu}}</td>
-				<td>{{$defisico->hd}}</td>
-				<td>{{$defisico->men}}</td>
-				<td>{{$defisico->act_pwd_201310}}</td>
-				<td>{{$defisico->gestion}}</td>
-				<td>{{$defisico->por_comprar}}</td>
-				<td>{{$defisico->serial}}</td>
-				<td>{{$defisico->fecha_instalacion}}</td>
-				<td>{{$defisico->toperacion}}</td>
-				<td>{{$defisico->soporte}}</td>
-				<td>{{$defisico->ini_soporte}}</td>
-				<td>{{$defisico->fin_soporte}}</td>
-				<td>{{$defisico->lic_so}}</td>
-				<td>{{$defisico->lic_programas}}</td>
-				<td>{{$defisico->producto}}</td>
-				<td>{{$defisico->contrato}}</td>
-				<td>
-					{!!link_to_route('defisico.edit', $title = 'Editar', $parameters = $defisico -> id, $attributes = ['class'=>'btn btn-primary'])!!}
-				</td>
-				<td>
-					{!!Form::open(['route' => ['defisico.destroy', $defisico -> id], 'method' => 'DELETE'])!!}
-						{!!Form::submit('Eliminar', ['class'=>'btn btn-danger'])!!}
-					{!!Form::close()!!}
-				</td>
+				<td>{{$efisico->id}}</td>
+				<td>{{$efisico->nombre}}</td>				
+				<td>{{$efisico->fabricante}}</td>
+				<td>{{$efisico->tipo}}</td>
+				<td>{{$efisico->estado}}</td>
+				<td>{{$efisico->ubicacion}}</td>
+				<td>{{$efisico->h_status}}</td>
+				<td>{{$efisico->so}}</td>
+				<td>{{$efisico->cpu}}</td>
+				<td>{{$efisico->hd}}</td>
+				<td>{{$efisico->men}}</td>
+				<td>{{$efisico->act_pwd_201310}}</td>
+				<td>{{$efisico->gestion}}</td>
+				<td>{{$efisico->por_comprar}}</td>
+				<td>{{$efisico->serial}}</td>
+				<td>{{$efisico->fecha_instalacion}}</td>
+				<td>{{$efisico->toperacion}}</td>
+				<td>{{$efisico->soporte}}</td>
+				<td>{{$efisico->ini_soporte}}</td>
+				<td>{{$efisico->fin_soporte}}</td>
+				<td>{{$efisico->lic_so}}</td>
+				<td>{{$efisico->lic_programas}}</td>
+				<td>{{$efisico->producto}}</td>
+				<td>{{$efisico->contrato}}</td>
 			</tr>
 			@endforeach
 		</tbody>
@@ -102,8 +97,8 @@
 
 	<hr>
 
-	{!!link_to('/defisico/create', $title='Nueva descripción', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
 	{!!link_to('/efisico', $title='Elementos Físicos', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+	{!!link_to('/defisico', $title='Descripciones', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
 	{!!link_to('/refisico', $title='Red', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
 	{!!link_to('/oefisico', $title='Observaciones', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
 	{!!link_to('/befisico', $title='Backup´s', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}

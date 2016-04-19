@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAplicacionsTable extends Migration
+class AlterEvirtual extends Migration
 {
     /**
      * Run the migrations.
@@ -12,11 +12,8 @@ class CreateAplicacionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('aplicacions', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('nomapp');
-            $table->timestamps();
-            $table -> softDeletes();
+        Schema::table('evirtuals', function (Blueprint $table) {
+            $table->string('tipo')->after('nombre');
         });
     }
 
@@ -27,6 +24,8 @@ class CreateAplicacionsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('aplicacions');
+        Schema::table('evirtuals', function (Blueprint $table) {
+            $table->dropColumn('tipo');
+        });
     }
 }
