@@ -13,7 +13,7 @@
 	{!!Form::open(['route'=>'evirtual.store', 'method'=>'POST'])!!}
 		@include('evirtual.form.evirtual')
 		{!!Form::submit('Agregar', ['class'=>'btn btn-primary'])!!}
-		{!!link_to('/tevirtual/create', $title='Si el hardware - real no se encuentra en la lista da clic aquí', $attributes = ['class' => 'btn btn-danger'], $secure = null)!!}
+		{!!link_to('/tevirtual/create', $title='Si el hardware - real del elemento virtual no se encuentra en la lista da clic aquí', $attributes = ['class' => 'btn btn-danger'], $secure = null)!!}
 	{!!Form::close()!!}
 
 	<hr>

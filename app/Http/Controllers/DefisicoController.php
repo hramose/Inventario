@@ -10,7 +10,6 @@ use Redirect;
 use Inventario\Http\Requests;
 use Inventario\Http\Controllers\Controller;
 use Inventario\Http\Requests\DefisicoRequest;
-use Inventario\Http\Requests\DefisicoUpdateRequest;
 use Illuminate\Routing\Route;
 
 class DefisicoController extends Controller

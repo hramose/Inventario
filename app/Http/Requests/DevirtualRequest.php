@@ -25,12 +25,9 @@ class DevirtualRequest extends Request
     {
         return [
             'ubicacion' => 'required|min:2', 
-            'h_status' => 'required|min:1', 
             'so' => 'required|min:2', 
             'cpu' => 'required|min:1', 
-            'hd' => 'required|min:1', 
             'men' => 'required|min:1', 
-            'act_pwd_201310' => 'required|min:1', 
             'evirtual_id' => 'required',
         ];
     }

@@ -1,4 +1,6 @@
 <div class="col-lg-3 ds">
+  <iframe src="http://www.zeitverschiebung.net/clock-widget-iframe?language=es&timezone=America%2FBogota" width="100%" height="130" frameborder="0" seamless></iframe> 
+  <small style="color:gray;">
   <h3>CALENDARIO</h3>                    
   <!-- CALENDAR-->
   <div id="calendar" class="mb">
