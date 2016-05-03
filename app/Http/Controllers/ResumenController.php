@@ -42,10 +42,10 @@ class ResumenController extends Controller
             ->select('tevirtuals.*', 'evirtuals.*', 'devirtuals.*', 'oevirtuals.*', 'bevirtuals.*', 'aev.*')
             ->get();
 
-        $aplicacions = DB::table('aplicacions', 'evirtuals')
-            ->join('asignarevs', 'aplicacions.id', '=', 'asignarevs.aplicacion_id')
-            ->select('aplicacions.*', 'asignarevs.*')
-            ->get();
+        /*$aplicacions = DB::table('aplicacions')
+            ->join('asignarevs AS app', 'aplicacions.id', '=', 'app.aplicacion_id')
+            ->select('aplicacions.*', 'app.*')
+            ->get();*/
 
         /*$evirtual= Evirtual::find(5);
 
@@ -54,7 +54,7 @@ class ResumenController extends Controller
             echo $aplicacions->pivot->evirtual_id;
         }   */            
 
-        dd($aplicacions);
+        //dd($evirtuals);
 
         return view('resumen.eresumenv', compact('evirtuals'));
     }
