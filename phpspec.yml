@@ -1,5 +1,0 @@
-suites:
-    main:
-        namespace: Inventario
-        psr4_prefix: Inventario
-        src_path: app
