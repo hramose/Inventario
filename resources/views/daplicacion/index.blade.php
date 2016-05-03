@@ -15,8 +15,9 @@
 				<th>Aplicación</th>
 				<th>Descripción</th>
 				<th>Versión</th>
-				<th>Editar</th>
+				<th>Licencia de la Aplicación</th>
 				<th>Eliminar</th>
+				<th>Editar</th>
 			</tr>		
 		</thead>
 		<tfoot>
@@ -25,8 +26,9 @@
 				<th>Aplicación</th>
 				<th>Descripción</th>
 				<th>Versión</th>
-				<th>Editar</th>
+				<th>Licencia de la Aplicación</th>
 				<th>Eliminar</th>
+				<th>Editar</th>
 			</tr>		
 		</tfoot>
 		<tbody>
@@ -36,6 +38,7 @@
 				<td>{{$daplicacion->aplicacion->nomapp}}</td>
 				<td>{{$daplicacion->descripcion}}</td>
 				<td>{{$daplicacion->version}}</td>
+				<td>{{$daplicacion->lic_programas}}</td>
 				<td>
 					{!!link_to_route('daplicacion.edit', $title = 'Editar', $parameters = $daplicacion -> id, $attributes = ['class'=>'btn btn-primary'])!!}
 				</td>

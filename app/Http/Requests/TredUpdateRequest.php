@@ -24,7 +24,7 @@ class TredUpdateRequest extends Request
     public function rules()
     {
         return [
-            'tipo_red' => 'required,
+            'tipo_red' => 'required',
         ];
     }
 }

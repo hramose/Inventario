@@ -77,8 +77,8 @@ class DaplicacionController extends Controller
      */
      public function edit($id)
     {
-        $daplicacions = Aplicacion::orderBy('nomapp', 'ASC')->lists('nomapp', 'id');
-        return view('daplicacion.edit', ['daplicacion' => $this->daplicacion], compact('daplicacions'));
+        $aplicacions = Aplicacion::orderBy('nomapp', 'ASC')->lists('nomapp', 'id');
+        return view('daplicacion.edit', ['daplicacion' => $this->daplicacion], compact('aplicacions'));
     }
 
     /**

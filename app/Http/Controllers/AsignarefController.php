@@ -80,7 +80,7 @@ class AsignarefController extends Controller
     public function edit($id)
     {
         $efisicos = Efisico::orderBy('nombre', 'ASC')->lists('nombre', 'id');
-        $aplicacions = Aplicaciones::orderBy('nomapp', 'ASC')->lists('nomapp', 'id');
+        $aplicacions = Aplicacion::orderBy('nomapp', 'ASC')->lists('nomapp', 'id');
         return view('asignaref.edit', ['asignaref' => $this->asignaref], compact('efisicos', 'aplicacions'));
     }
 

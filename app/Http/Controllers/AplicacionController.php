@@ -9,7 +9,7 @@ use Redirect;
 use Inventario\Http\Requests;
 use Inventario\Http\Controllers\Controller;
 use Inventario\Http\Requests\AplicacionRequest;
-use Inventario\Http\Response\AplicacionUpdateRequest;
+use Inventario\Http\Requests\AplicacionUpdateRequest;
 use Illuminate\Routing\Route;
 
 class AplicacionController extends Controller

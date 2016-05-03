@@ -6,7 +6,7 @@
 </div>
 
 <div class="form-group">
-	{!!Form::label('tred_id','Seleccione el Tipo de Red (Si el tipo de red no se encuentra en la lista, da clic en el botón ver redes, luego da clic en el botón gestionar tipos de redes y luego agrega un nuevo tipo de red): ')!!}
+	{!!Form::label('tred_id','Seleccione el Tipo de Red: ')!!}
 	{!!Form::select('tred_id', $treds, null, ['id'=>'tred_id', 'class'=>'form-control'])!!}
 </div>
 

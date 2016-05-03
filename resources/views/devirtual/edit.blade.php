@@ -4,8 +4,6 @@
 
   @include('alerts.request')
 
-  {!!link_to('/devirtual', $title='Ver Descripciones', $attributes = ['class' => 'btn btn-theme'], $secure = null)!!}
-
   <hr>
 
   <h4><i class="fa fa-angle-right"></i> Editar Descripción </h4>
@@ -21,4 +19,11 @@
     </td>
   </tr>
   
+  <hr>
+  
+  {!!link_to('/devirtual', $title='Descripciones', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+  {!!link_to('/evirtual', $title='Elementos virtuales', $attributes = ['class' => 'btn btn-default'], $secure = null)!!}
+
+  <hr>
+
 @stop

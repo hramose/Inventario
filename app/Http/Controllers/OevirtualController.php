@@ -42,7 +42,7 @@ class OevirtualController extends Controller
      */
     public function create()
     {
-        $evirtuals = Evirtual::orderBy('nombre', 'ASC')->lists('nombre', 'id');
+        $evirtuals = Evirtual::orderBy('nomevirtual', 'ASC')->lists('nomevirtual', 'id');
         return view('oevirtual.create', compact('evirtuals'));
     }
 
@@ -77,7 +77,7 @@ class OevirtualController extends Controller
      */
     public function edit($id)
     {
-        $evirtuals = Evirtual::orderBy('nombre', 'ASC')->lists('nombre', 'id');
+        $evirtuals = Evirtual::orderBy('nomevirtual', 'ASC')->lists('nomevirtual', 'id');
         return view('oevirtual.edit', ['oevirtual' => $this->oevirtual], compact('evirtuals'));
     }
 

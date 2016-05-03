@@ -1,9 +1,9 @@
 @extends('layouts.admin')
 
-@include('alerts.success')
-
 @section('content')
 
+	@include('alerts.success')
+	
 	<hr>
 	
 	<h3><i class="fa fa-angle-right"></i> Usuarios </h3>
